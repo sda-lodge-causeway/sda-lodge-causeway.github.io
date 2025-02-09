@@ -1,13 +1,6 @@
 title: SDA Lodge Causeway Church
-author: Maurice Elliott
 baseurl: "/"
-description: "The church website for SDA Lodge Causeway Bristol" 
+description: "The church website for SDA Lodge Causeway Bristol"
 github_username: sda-lodge-causeway
 # Build settings
-remote_theme: volny/creative-theme-jekyll
-# Build settings
 markdown: kramdown
-
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
