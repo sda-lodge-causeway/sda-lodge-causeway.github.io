@@ -12,13 +12,12 @@ keep_files:
   - ".gitignore"
 
 # Site settings
-title: Airspace
-subtitle: "A free HTML5 agency template"
+title: Seventh Day Adventist Church - Bristol Lodge Causeway
+subtitle: ""
 url: "http://sda-lodge-causeway.github.io" # the base hostname & protocol for your site
-# baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
-baseurl: "/"
+baseurl: ""
 cover: "/assets/cover.png"
-logo: "/assets/logo.png"
+logo: "/resources/logo.png"
 
 # Build settings
 markdown: kramdown
