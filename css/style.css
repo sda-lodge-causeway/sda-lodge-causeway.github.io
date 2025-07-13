@@ -285,18 +285,12 @@ header {
     border-bottom: 1px solid var(--border-color);
     position: fixed;
     top: 0;
-    width: calc(100% - 80px);
+    width: calc(100% - 100px);
     z-index: 1000;
     transition: all 0.3s ease;
 }
 
-@media (min-width: 769px) and (max-width: 991px) {
-    header {
-        width: calc(100% - 60px);
-    }
-}
-
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     header {
         width: 100%;
     }
@@ -438,23 +432,18 @@ body {
     }
 }
 
-/* Small desktop and tablet - smaller sidebar */
-@media (min-width: 769px) and (max-width: 1200px) {
-    .blue-sidebar {
-        width: 60px;
+/* Mobile - hide sidebar and expand content */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px;
     }
 
-    .sidebar-logo {
-        width: 35px;
-        max-width: 35px;
+    .blue-sidebar {
+        display: none !important;
     }
 
     .main-content {
-        margin-right: 60px;
-    }
-
-    header {
-        width: calc(100% - 60px);
+        margin-right: 0 !important;
     }
 
     #hero-with-bg h1 {
@@ -473,47 +462,6 @@ body {
     .inline-form .form-control {
         max-width: 100%;
         width: 100%;
-    }
-}
-
-/* Mobile - very small sidebar */
-@media (max-width: 768px) and (min-width: 481px) {
-    body {
-        padding-top: 60px;
-    }
-
-    .blue-sidebar {
-        width: 40px !important;
-        display: flex !important;
-    }
-
-    .sidebar-logo {
-        width: 25px !important;
-        max-width: 25px !important;
-        height: auto !important;
-    }
-
-    .main-content {
-        margin-right: 40px !important;
-    }
-
-    header {
-        width: calc(100% - 40px);
-    }
-}
-
-/* Very small screens - hide sidebar completely */
-@media (max-width: 480px) {
-    body {
-        padding-top: 60px;
-    }
-
-    .blue-sidebar {
-        display: none !important;
-    }
-
-    .main-content {
-        margin-right: 0 !important;
     }
 
     .navbar-nav {
@@ -546,7 +494,7 @@ body {
     position: fixed;
     right: 0;
     top: 0;
-    width: 80px;
+    width: 100px;
     height: 100vh;
     background: linear-gradient(
         180deg,
@@ -564,16 +512,16 @@ body {
 }
 
 .sidebar-logo {
-    width: 50px;
+    width: 60px;
     height: auto;
     filter: brightness(0) invert(1);
-    max-width: 50px;
+    max-width: 60px;
     display: block;
 }
 
 /* Main Content Area */
 .main-content {
-    margin-right: 80px;
+    margin-right: 100px;
 }
 
 /* Hero Section with Background */
