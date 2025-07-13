@@ -1,27 +1,529 @@
 ---
 layout: page
-title: Blog
+title: Resources & Updates - Bristol Lodge Causeway Seventh-day Adventist Church
 permalink: /blog/
 ---
-<!-- Slider Start -->
-<section id="global-header">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="block">
-          <h1>Get the latest on what we're doing</h1>
-          <p>Catch up with us, anytime and anywhere</p>
-        </div>
-      </div>
+
+<!-- Blue Sidebar -->
+<div class="blue-sidebar">
+    <div class="sidebar-content">
+        <img
+            src="{{ site.baseurl }}/resources/sda-logo.png"
+            alt="SDA Logo"
+            class="sidebar-logo"
+        />
     </div>
-  </div>
-</section>
-{% for post in site.posts %}
-<div class="post-area">
-  <a href="{{ post.url | prepend: site.baseurl }}" class="bold">{{ post.title }}</a>
-  <p class="post-date">{{ post.date | date_to_long_string }}</p>
-  <p>
-    {{ post.content | strip_html | truncatewords: 50 }}
-  </p>
 </div>
-{% endfor %}
+
+<!-- Main Content Area -->
+<div class="main-content">
+    <!-- Hero Section -->
+    <section id="blog-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="blog-hero-content">
+                        <h1>Resources & Updates</h1>
+                        <p>
+                            Stay connected with our church family through
+                            sermons, Bible studies, announcements, and spiritual
+                            resources to help you grow in your faith journey.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Resources Section -->
+    <section id="featured-resources">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-title">Featured Resources</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fa fa-book"></i>
+                        </div>
+                        <h3>Bible Studies</h3>
+                        <p>
+                            Join our weekly Bible study sessions and deepen your
+                            understanding of God's Word.
+                        </p>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fa fa-headphones"></i>
+                        </div>
+                        <h3>Sermons</h3>
+                        <p>
+                            Listen to inspiring messages from our pastors and
+                            guest speakers.
+                        </p>
+                        <a href="#" class="btn btn-outline">Listen Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <h3>Youth Ministry</h3>
+                        <p>
+                            Resources and activities for our young people to
+                            grow in faith together.
+                        </p>
+                        <a href="#" class="btn btn-outline">Join Youth</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Posts Section -->
+    <section id="latest-posts">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-title">Latest Updates</h2>
+                </div>
+            </div>
+            <div class="row">
+                {% if site.posts.size > 0 %} {% for post in site.posts limit:6
+                %}
+                <div class="col-md-6 col-lg-4">
+                    <article class="post-card">
+                        <div class="post-header">
+                            <h3 class="post-title">
+                                <a href="{{ post.url | prepend: site.baseurl }}"
+                                    >{{ post.title }}</a
+                                >
+                            </h3>
+                            <div class="post-meta">
+                                <span class="post-date">
+                                    <i class="fa fa-calendar"></i>
+                                    {{ post.date | date: "%B %d, %Y" }}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <p>
+                                {{ post.content | strip_html | truncatewords: 25
+                                }}
+                            </p>
+                        </div>
+                        <div class="post-footer">
+                            <a
+                                href="{{ post.url | prepend: site.baseurl }}"
+                                class="read-more"
+                            >
+                                Read More <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                {% endfor %} {% else %}
+                <div class="col-md-12">
+                    <div class="no-posts">
+                        <div class="no-posts-content">
+                            <i class="fa fa-book fa-3x"></i>
+                            <h3>Coming Soon</h3>
+                            <p>
+                                We're preparing inspiring content for you. Check
+                                back soon for sermons, Bible studies, and church
+                                updates.
+                            </p>
+                            <a
+                                href="{{ site.baseurl }}/contact"
+                                class="btn btn-primary"
+                                >Get in Touch</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripture of the Week Section -->
+    <section id="scripture-week">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="scripture-content">
+                        <h2>Scripture of the Week</h2>
+                        <blockquote class="scripture-quote">
+                            <p>
+                                "For I know the plans I have for you," declares
+                                the Lord, "plans to prosper you and not to harm
+                                you, to give you hope and a future."
+                            </p>
+                            <cite>Jeremiah 29:11 (NIV)</cite>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="blog-cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="cta-content">
+                        <h2>Stay Connected</h2>
+                        <p>
+                            Join our mailing list to receive the latest sermons,
+                            Bible studies, and church updates directly in your
+                            inbox.
+                        </p>
+                        <a
+                            href="{{ site.baseurl }}/#mailing-list"
+                            class="btn btn-primary btn-lg"
+                        >
+                            Subscribe Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+    /* Blog Page Specific Styles */
+    #blog-hero {
+        background-color: var(--background-light);
+        padding: 100px 0 80px;
+        text-align: center;
+    }
+
+    .blog-hero-content h1 {
+        color: var(--text-dark);
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .blog-hero-content p {
+        font-size: 1.25rem;
+        color: var(--text-light);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    #featured-resources {
+        padding: 80px 0;
+        background: white;
+    }
+
+    .section-title {
+        text-align: center;
+        color: var(--text-dark);
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .resource-card {
+        background: white;
+        padding: 40px 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin-bottom: 30px;
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+        height: 100%;
+    }
+
+    .resource-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .resource-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 2rem;
+    }
+
+    .resource-icon i {
+        font-size: 2rem;
+        color: white;
+    }
+
+    .resource-card h3 {
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .resource-card p {
+        color: var(--text-light);
+        margin-bottom: 2rem;
+        line-height: 1.6;
+    }
+
+    .btn-outline {
+        display: inline-block;
+        padding: 12px 24px;
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .btn-outline:hover {
+        background-color: var(--primary-color);
+        color: white;
+        text-decoration: none;
+    }
+
+    #latest-posts {
+        padding: 80px 0;
+        background-color: var(--background-light);
+    }
+
+    .post-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .post-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .post-header {
+        padding: 30px 30px 20px;
+    }
+
+    .post-title a {
+        color: var(--text-dark);
+        text-decoration: none;
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 1.4;
+    }
+
+    .post-title a:hover {
+        color: var(--primary-color);
+    }
+
+    .post-meta {
+        margin-top: 1rem;
+    }
+
+    .post-date {
+        color: var(--text-light);
+        font-size: 0.9rem;
+    }
+
+    .post-date i {
+        margin-right: 5px;
+    }
+
+    .post-content {
+        padding: 0 30px;
+        flex-grow: 1;
+    }
+
+    .post-content p {
+        color: var(--text-light);
+        line-height: 1.6;
+    }
+
+    .post-footer {
+        padding: 20px 30px 30px;
+        margin-top: auto;
+    }
+
+    .read-more {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .read-more:hover {
+        color: var(--secondary-color);
+        text-decoration: none;
+    }
+
+    .read-more i {
+        margin-left: 5px;
+        transition: transform 0.3s ease;
+    }
+
+    .read-more:hover i {
+        transform: translateX(3px);
+    }
+
+    .no-posts {
+        text-align: center;
+        padding: 60px 0;
+    }
+
+    .no-posts-content i {
+        color: var(--text-light);
+        margin-bottom: 2rem;
+    }
+
+    .no-posts-content h3 {
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+    }
+
+    .no-posts-content p {
+        color: var(--text-light);
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+    }
+
+    #scripture-week {
+        padding: 80px 0;
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        color: white;
+        text-align: center;
+    }
+
+    .scripture-content h2 {
+        color: white;
+        margin-bottom: 3rem;
+        font-size: 2.5rem;
+    }
+
+    .scripture-quote {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 40px;
+        border-radius: 10px;
+        border-left: 4px solid white;
+        backdrop-filter: blur(10px);
+    }
+
+    .scripture-quote p {
+        font-size: 1.5rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        color: white;
+        font-style: italic;
+    }
+
+    .scripture-quote cite {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    #blog-cta {
+        padding: 80px 0;
+        background: white;
+        text-align: center;
+    }
+
+    .cta-content h2 {
+        color: var(--text-dark);
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-content p {
+        font-size: 1.25rem;
+        color: var(--text-light);
+        margin-bottom: 2rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .blog-hero-content h1 {
+            font-size: 2.5rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+        }
+
+        .resource-card {
+            padding: 30px 20px;
+        }
+
+        .post-header {
+            padding: 25px 25px 15px;
+        }
+
+        .post-content {
+            padding: 0 25px;
+        }
+
+        .post-footer {
+            padding: 15px 25px 25px;
+        }
+
+        .scripture-quote {
+            padding: 30px 25px;
+        }
+
+        .scripture-quote p {
+            font-size: 1.25rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        #blog-hero,
+        #featured-resources,
+        #latest-posts,
+        #scripture-week,
+        #blog-cta {
+            padding: 60px 0;
+        }
+
+        .resource-card {
+            padding: 25px 20px;
+        }
+
+        .resource-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 1.5rem;
+        }
+
+        .resource-icon i {
+            font-size: 1.5rem;
+        }
+    }
+</style>
