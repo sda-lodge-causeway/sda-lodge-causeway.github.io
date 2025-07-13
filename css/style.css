@@ -434,8 +434,14 @@ body {
 
 /* Mobile - hide sidebar and expand content */
 @media (max-width: 768px) {
+    html,
     body {
-        padding-top: 60px;
+        overflow-x: hidden !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding-top: 60px !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
     }
 
     .blue-sidebar {
@@ -443,39 +449,23 @@ body {
     }
 
     .main-content {
-        margin-right: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
-    /* Ensure all content sections have no right margin on mobile */
-    body {
-        margin-right: 0 !important;
+    .container {
+        margin: 0 auto !important;
+        padding: 0 15px !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
     section {
-        margin-right: 0 !important;
-    }
-
-    .container {
-        margin-right: auto !important;
-        padding-right: 15px !important;
-    }
-
-    /* Target specific layout elements causing spacing issues */
-    .main-content,
-    .main-content * {
-        margin-right: 0 !important;
-    }
-
-    .container {
-        padding-right: 15px !important;
-        padding-left: 15px !important;
-        margin-right: auto !important;
-        margin-left: auto !important;
-    }
-
-    html,
-    body {
-        overflow-x: hidden !important;
+        margin: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
         width: 100% !important;
     }
 
@@ -555,6 +545,17 @@ body {
 /* Main Content Area */
 .main-content {
     margin-right: 100px;
+}
+
+/* Mobile override for main content */
+@media (max-width: 768px) {
+    .main-content {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-right: 0 !important;
+    }
 }
 
 /* Hero Section with Background */
@@ -881,4 +882,70 @@ body {
 
 .post-area a:hover {
     color: #0d0017;
+}
+
+/* FINAL MOBILE OVERRIDE - MAXIMUM SPECIFICITY */
+@media (max-width: 768px) {
+    html {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    body {
+        margin: 0 !important;
+        padding-top: 60px !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .main-content {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        position: relative !important;
+        left: 0 !important;
+        right: 0 !important;
+    }
+
+    .blue-sidebar {
+        display: none !important;
+        visibility: hidden !important;
+        width: 0 !important;
+        opacity: 0 !important;
+    }
+
+    section {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .container {
+        margin-right: auto !important;
+        margin-left: auto !important;
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .row {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    header {
+        width: 100% !important;
+        margin-right: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+    }
 }
